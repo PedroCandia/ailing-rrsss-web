@@ -3,7 +3,7 @@ const siteConfig = {
   name: "Ailing",
   username: "CODIGO AILING",
   bio: "Creador de contenido de Rocket League | Torneos, privadas, freestyle, retos, etc.",
-  photo: "assets/img/Ailing.png",
+  photo: "assets/logo.png",
   // Cuando publiques el sitio, reemplaza window.location.href por tu URL real.
   siteUrl: window.location.href,
   socials: [

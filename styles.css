@@ -157,13 +157,15 @@ button {
 }
 
 .profile-photo {
-  width: 112px;
-  height: 112px;
+  width: min(112px, 42vw);
+  height: auto;
+  aspect-ratio: 1;
   display: block;
   margin: 0 auto 16px;
   border-radius: 50%;
   border: 3px solid rgba(255, 255, 255, 0.92);
-  object-fit: cover;
+  object-fit: contain;
+  background: #020617;
   box-shadow:
     0 0 0 7px rgba(56, 189, 248, 0.08),
     0 0 34px rgba(236, 72, 153, 0.14),
@@ -376,8 +378,8 @@ h1 {
   }
 
   .profile-photo {
-    width: 98px;
-    height: 98px;
+    width: min(98px, 38vw);
+    height: auto;
   }
 
   .social-links {
