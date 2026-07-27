@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Link in bio oficial de Ailing: redes sociales, contenido de Rocket League y codigo de creador.">
+  <title>Ailing | Links</title>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell" aria-label="Perfil de enlaces de Ailing">
+    <section class="profile-card" aria-labelledby="profile-title">
+      <button class="share-button" type="button" aria-label="Compartir perfil">
+        <i class="fa-solid fa-share-nodes"></i>
+      </button>
+
+      <header class="profile-header">
+        <img class="profile-photo" data-profile-photo src="assets/img/Ailing.png" alt="Foto de perfil de Ailing">
+        <h1 id="profile-title" data-profile-name>Ailing</h1>
+        <p class="username" data-profile-user>CODIGO AILING</p>
+        <p class="bio" data-profile-bio>Creador de contenido de Rocket League | Torneos, privadas, freestyle, retos, etc.</p>
+
+        <nav class="social-links" data-social-links aria-label="Redes sociales"></nav>
+      </header>
+
+      <nav class="link-list" data-link-list aria-label="Enlaces principales"></nav>
+    </section>
+  </main>
+
+  <aside class="qr-panel" aria-label="Mirar en celular">
+    <span>Mirar en celular</span>
+    <div id="qr-code" class="qr-code" aria-hidden="true"></div>
+  </aside>
+
+  <div class="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
