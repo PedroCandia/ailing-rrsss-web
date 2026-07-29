@@ -1,8 +1,8 @@
 // Edita este objeto para cambiar textos, foto, enlaces y QR.
 const siteConfig = {
   name: "Ailing",
-  username: "CODIGO AILING",
-  bio: "Creador de contenido de Rocket League | Torneos, privadas, freestyle, retos, etc.",
+  username: "C\u00d3DIGO AILING",
+  bio: "Creador de contenido de Rocket League<br>Torneos, privadas, freestyle, retos y m\u00e1s.",
   photo: "assets/logo.png",
   // Cuando publiques el sitio, reemplaza window.location.href por tu URL real.
   siteUrl: window.location.href,
@@ -29,12 +29,11 @@ let toastTimer;
 renderProfile();
 renderSocialLinks();
 renderButtons();
-renderQrCode();
 
 function renderProfile() {
   document.querySelector("[data-profile-name]").textContent = siteConfig.name;
   document.querySelector("[data-profile-user]").textContent = siteConfig.username;
-  document.querySelector("[data-profile-bio]").textContent = siteConfig.bio;
+  document.querySelector("[data-profile-bio]").innerHTML = siteConfig.bio;
   document.querySelector("[data-profile-photo]").src = siteConfig.photo;
   document.title = `${siteConfig.name} | Links`;
 }
@@ -77,32 +76,16 @@ function renderButtons() {
   });
 
   document.querySelectorAll("[data-copy-code]").forEach((button) => {
-    button.addEventListener("click", () => copyText(button.dataset.copyCode, `C\u00f3digo ${button.dataset.copyCode} copiado`));
+    button.addEventListener("click", () => copyText(button.dataset.copyCode, "C\u00f3digo copiado"));
   });
 }
 
-function renderQrCode() {
-  const qrContainer = document.querySelector("#qr-code");
+shareButton.addEventListener("click", sharePage);
 
-  if (!window.QRCode || !qrContainer) {
-    qrContainer.textContent = "QR";
-    return;
-  }
-
-  new QRCode(qrContainer, {
-    text: siteConfig.siteUrl,
-    width: 86,
-    height: 86,
-    colorDark: "#0f172a",
-    colorLight: "#f8fafc",
-    correctLevel: QRCode.CorrectLevel.H
-  });
-}
-
-shareButton.addEventListener("click", async () => {
+async function sharePage() {
   const shareData = {
     title: `${siteConfig.name} | Links`,
-    text: siteConfig.bio,
+    text: siteConfig.bio.replace(/<br\s*\/?>/gi, " "),
     url: siteConfig.siteUrl
   };
 
@@ -117,7 +100,7 @@ shareButton.addEventListener("click", async () => {
   }
 
   copyText(siteConfig.siteUrl, "Enlace copiado");
-});
+}
 
 async function copyText(text, message) {
   try {
