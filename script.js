@@ -12,7 +12,7 @@ const siteConfig = {
     { name: "Discord", icon: "fa-brands fa-discord", url: "https://discord.gg/ezSR5JRKUJ" }
   ],
   buttons: [
-    { label: "\u00daltimo video", icon: "fa-solid fa-play", url: "https://www.youtube.com/watch?v=JPrVejbC9fE" },
+    { label: "\u00daltimo video", icon: "fa-solid fa-play", url: "https://www.youtube.com/watch?v=pTwj4YFVrik" },
     { label: "TikTok", icon: "fa-brands fa-tiktok", url: "https://www.tiktok.com/@ailing_its" },
     { label: "YouTube", icon: "fa-brands fa-youtube", url: "https://www.youtube.com/@ailing21" },
     { label: "Discord", icon: "fa-brands fa-discord", url: "https://discord.gg/ezSR5JRKUJ" },
