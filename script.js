@@ -18,7 +18,7 @@ const siteConfig = {
       label: "Attack Shark X11 + Base de carga",
       cta: "Comprar ahora",
       icon: "fa-solid fa-cart-shopping",
-      url: "https://z1fwxb-vt.myshopify.com/products/mouse-gamer-attack-shark-x11-con-base-de-carga?variant=49132053528811"
+      url: "https://ailing.com.mx/products/mouse-gamer-attack-shark-x11-con-base-de-carga"
     },
     { label: "TikTok", icon: "fa-brands fa-tiktok", url: "https://www.tiktok.com/@ailing_its" },
     { label: "YouTube", icon: "fa-brands fa-youtube", url: "https://www.youtube.com/@ailing21" },
