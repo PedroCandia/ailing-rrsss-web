@@ -12,14 +12,6 @@ const siteConfig = {
     { name: "Discord", icon: "fa-brands fa-discord", url: "https://discord.gg/ezSR5JRKUJ" }
   ],
   buttons: [
-    {
-      type: "product",
-      kicker: "Mi Mouse Gamer",
-      label: "Attack Shark X11 + Base de carga",
-      cta: "Comprar ahora",
-      icon: "fa-solid fa-cart-shopping",
-      url: "https://ailing.com.mx/products/mouse-gamer-attack-shark-x11-con-base-de-carga"
-    },
     { label: "TikTok", icon: "fa-brands fa-tiktok", url: "https://www.tiktok.com/@ailing_its" },
     { label: "YouTube", icon: "fa-brands fa-youtube", url: "https://www.youtube.com/@ailing21" },
     { label: "Discord", icon: "fa-brands fa-discord", url: "https://discord.gg/ezSR5JRKUJ" },
@@ -59,19 +51,6 @@ function renderButtons() {
   linkList.innerHTML = siteConfig.buttons
     .map((button) => {
       const icon = `<i class="${button.icon}"></i>`;
-
-      if (button.type === "product") {
-        return `
-          <a class="link-button product-card" href="${button.url}" target="_blank" rel="noopener noreferrer" aria-label="${button.label}: ${button.cta}">
-            <span class="product-card__content">
-              <small class="product-card__kicker">${button.kicker}</small>
-              <strong class="product-card__title">${button.label}</strong>
-              <span class="product-card__cta">${button.cta}</span>
-            </span>
-            <span class="product-card__icon" aria-hidden="true">${icon}</span>
-          </a>
-        `;
-      }
 
       if (button.copy) {
         return `
