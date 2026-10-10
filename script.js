@@ -14,6 +14,7 @@ const siteConfig = {
   buttons: [
     { label: "TikTok", icon: "fa-brands fa-tiktok", url: "https://www.tiktok.com/@ailing_its" },
     { label: "YouTube", icon: "fa-brands fa-youtube", url: "https://www.youtube.com/@ailing21" },
+    { label: "Starvios", icon: "fa-solid fa-star", url: "https://starvios.com/ailing" },
     { label: "Discord", icon: "fa-brands fa-discord", url: "https://discord.gg/ezSR5JRKUJ" },
     { label: "C\u00f3digo de creador: AILING", icon: "fa-regular fa-copy", copy: "AILING" }
   ]
