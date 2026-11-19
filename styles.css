@@ -328,15 +328,23 @@ h1::after {
 }
 
 .link-button span,
-.link-button i {
+.link-button i,
+.link-button svg {
   position: relative;
   z-index: 1;
 }
 
-.link-button i {
+.link-button i,
+.link-button svg {
   color: var(--white);
   font-size: 1.02rem;
   transition: color var(--transition), transform var(--transition);
+}
+
+.link-button svg {
+  width: 1.02rem;
+  height: 1.02rem;
+  fill: currentColor;
 }
 
 .link-button:hover,
@@ -347,7 +355,9 @@ h1::after {
 }
 
 .link-button:hover i,
-.link-button:focus-visible i {
+.link-button:focus-visible i,
+.link-button:hover svg,
+.link-button:focus-visible svg {
   color: var(--pink);
   transform: translateX(2px);
 }
