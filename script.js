@@ -1,24 +1,52 @@
-// Edita este objeto para cambiar textos, foto, enlaces y QR.
-const siteConfig = {
-  name: "Ailing",
-  username: "C\u00d3DIGO AILING",
-  bio: "Creador de contenido de Rocket League<br>Torneos, privadas, freestyle, retos y m\u00e1s.",
-  photo: "assets/logo.png",
-  // Cuando publiques el sitio, reemplaza window.location.href por tu URL real.
-  siteUrl: window.location.href,
-  socials: [
-    { name: "TikTok", icon: "fa-brands fa-tiktok", url: "https://www.tiktok.com/@ailing_its" },
-    { name: "YouTube", icon: "fa-brands fa-youtube", url: "https://www.youtube.com/@ailing21" },
-    { name: "Discord", icon: "fa-brands fa-discord", url: "https://discord.gg/ezSR5JRKUJ" }
-  ],
-  buttons: [
-    { label: "TikTok", icon: "fa-brands fa-tiktok", url: "https://www.tiktok.com/@ailing_its" },
-    { label: "YouTube", icon: "fa-brands fa-youtube", url: "https://www.youtube.com/@ailing21" },
-    { label: "Kick", icon: "kick", url: "https://kick.com/ailing21" },
-    { label: "Discord", icon: "fa-brands fa-discord", url: "https://discord.gg/ezSR5JRKUJ" },
-    { label: "C\u00f3digo de creador: AILING", icon: "fa-regular fa-copy", copy: "AILING" }
-  ]
+// Los enlaces compartidos se definen una sola vez para ambos perfiles.
+const sharedLinks = {
+  kick: "https://kick.com/ailing21",
+  discord: "https://discord.gg/ezSR5JRKUJ",
+  creatorCode: "AILING"
 };
+
+const profiles = {
+  main: {
+    name: "Ailing",
+    username: "CÓDIGO AILING",
+    bio: "Creador de contenido de Rocket League<br>Torneos, privadas, freestyle, retos y más.",
+    photo: "assets/logo.png",
+    socials: [
+      { name: "TikTok", icon: "fa-brands fa-tiktok", url: "https://www.tiktok.com/@ailing_its" },
+      { name: "YouTube", icon: "fa-brands fa-youtube", url: "https://www.youtube.com/@ailing21" },
+      { name: "Discord", icon: "fa-brands fa-discord", url: sharedLinks.discord }
+    ],
+    buttons: [
+      { label: "TikTok", icon: "fa-brands fa-tiktok", url: "https://www.tiktok.com/@ailing_its" },
+      { label: "YouTube", icon: "fa-brands fa-youtube", url: "https://www.youtube.com/@ailing21" },
+      { label: "Kick", icon: "kick", url: sharedLinks.kick },
+      { label: "Discord", icon: "fa-brands fa-discord", url: sharedLinks.discord },
+      { label: "Ailing Byte · juegos variados", icon: "fa-solid fa-gamepad", url: "/ailingbyte", internal: true, featured: true },
+      { label: `Código de creador: ${sharedLinks.creatorCode}`, icon: "fa-regular fa-copy", copy: sharedLinks.creatorCode }
+    ]
+  },
+  byte: {
+    name: "Ailing Byte",
+    username: "JUEGOS VARIADOS",
+    bio: "Canal secundario de juegos variados:<br>GTA, Fortnite y más.",
+    photo: "../assets/logo.png",
+    socials: [
+      { name: "TikTok", icon: "fa-brands fa-tiktok", url: "https://www.tiktok.com/@ailing.byte" },
+      { name: "YouTube", icon: "fa-brands fa-youtube", url: "https://www.youtube.com/@ailingbyte" },
+      { name: "Discord", icon: "fa-brands fa-discord", url: sharedLinks.discord }
+    ],
+    buttons: [
+      { label: "TikTok · Ailing Byte", icon: "fa-brands fa-tiktok", url: "https://www.tiktok.com/@ailing.byte" },
+      { label: "YouTube · Ailing Byte", icon: "fa-brands fa-youtube", url: "https://www.youtube.com/@ailingbyte" },
+      { label: "Kick", icon: "kick", url: sharedLinks.kick },
+      { label: "Discord", icon: "fa-brands fa-discord", url: sharedLinks.discord },
+      { label: `Código de creador: ${sharedLinks.creatorCode}`, icon: "fa-regular fa-copy", copy: sharedLinks.creatorCode }
+    ]
+  }
+};
+
+const siteConfig = profiles[document.body.dataset.profile] || profiles.main;
+siteConfig.siteUrl = window.location.href;
 
 const toast = document.querySelector(".toast");
 const socialLinks = document.querySelector("[data-social-links]");
@@ -65,7 +93,7 @@ function renderButtons() {
       }
 
       return `
-        <a class="link-button" href="${button.url}" target="_blank" rel="noopener noreferrer">
+        <a class="link-button${button.featured ? " link-button--featured" : ""}" href="${button.url}"${button.internal ? "" : ' target="_blank" rel="noopener noreferrer"'}>
           <span>${button.label}</span>
           ${icon}
         </a>
