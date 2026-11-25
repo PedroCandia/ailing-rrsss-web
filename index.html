@@ -3,81 +3,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ailing | Links</title>
-  <meta name="description" content="Ailing, creador de contenido de Rocket League. Torneos, privadas, freestyle, retos y mas. Encuentra YouTube, TikTok, Discord y codigo de creador AILING.">
-  <meta name="keywords" content="Ailing, CODIGO AILING, Rocket League, creador de contenido, torneos Rocket League, privadas Rocket League, freestyle Rocket League, retos Rocket League, YouTube, TikTok, Discord">
+  <title>Ailing | Rocket League</title>
+  <meta name="description" content="Ailing, creador de contenido de Rocket League: torneos, privadas, freestyle, retos y más. Encuentra TikTok, YouTube, Kick, Discord y el código de creador AILING.">
+  <meta name="keywords" content="Ailing, Rocket League, torneos, privadas, freestyle, retos, creador de contenido, código AILING">
   <meta name="author" content="Ailing">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#050505">
+  <meta name="theme-color" content="#071525">
   <link rel="canonical" href="https://ailing.com.mx/">
   <link rel="icon" type="image/png" href="assets/logo.png">
   <link rel="apple-touch-icon" href="assets/logo.png">
-
-  <meta property="og:type" content="profile">
-  <meta property="og:title" content="Ailing | Links">
-  <meta property="og:description" content="Creador de contenido de Rocket League. Torneos, privadas, freestyle, retos y mas.">
-  <meta property="og:url" content="https://ailing.com.mx/">
-  <meta property="og:image" content="https://ailing.com.mx/assets/logo.png">
-  <meta property="og:image:alt" content="Logo de Ailing">
-  <meta property="og:site_name" content="Ailing">
-
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Ailing | Links">
-  <meta name="twitter:description" content="Creador de contenido de Rocket League. Torneos, privadas, freestyle, retos y mas.">
-  <meta name="twitter:image" content="https://ailing.com.mx/assets/logo.png">
+  <link rel="preload" as="image" href="assets/ailing-arena.jpg" fetchpriority="high">
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="main.css">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Ailing | Rocket League">
+  <meta property="og:description" content="Torneos, privadas, freestyle y retos. Entra a la arena de Ailing.">
+  <meta property="og:url" content="https://ailing.com.mx/">
+  <meta property="og:image" content="https://ailing.com.mx/assets/ailing-arena.jpg">
+  <meta property="og:image:alt" content="Arena futurista de Ailing">
+  <meta property="og:site_name" content="Ailing">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ailing | Rocket League">
+  <meta name="twitter:description" content="Torneos, privadas, freestyle y retos. Entra a la arena de Ailing.">
+  <meta name="twitter:image" content="https://ailing.com.mx/assets/ailing-arena.jpg">
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfilePage",
-      "name": "Ailing | Links",
-      "url": "https://ailing.com.mx/",
-      "mainEntity": {
-        "@type": "Person",
-        "name": "Ailing",
-        "alternateName": "CÓDIGO AILING",
-        "description": "Creador de contenido de Rocket League. Torneos, privadas, freestyle, retos y mas.",
-        "image": "https://ailing.com.mx/assets/logo.png",
-        "sameAs": [
-          "https://www.youtube.com/@ailing21",
-          "https://www.tiktok.com/@ailing_its",
-          "https://discord.gg/ezSR5JRKUJ"
-        ]
-      }
-    }
+    {"@context":"https://schema.org","@type":"ProfilePage","name":"Ailing | Rocket League","url":"https://ailing.com.mx/","mainEntity":{"@type":"Person","name":"Ailing","alternateName":"CÓDIGO AILING","description":"Creador de contenido de Rocket League. Torneos, privadas, freestyle, retos y más.","image":"https://ailing.com.mx/assets/logo.png","sameAs":["https://www.youtube.com/@ailing21","https://www.tiktok.com/@ailing_its","https://kick.com/ailing21","https://discord.gg/ezSR5JRKUJ"]}}
   </script>
 </head>
-<body data-profile="main">
-  <main class="page-shell" aria-label="Perfil de enlaces de Ailing">
-    <section class="profile-card" aria-labelledby="profile-title">
-      <button class="share-button" type="button" aria-label="Compartir perfil">
-        <i class="fa-solid fa-share-nodes"></i>
-      </button>
-
-      <header class="profile-header">
-        <img class="profile-photo" data-profile-photo src="assets/logo.png" alt="Logo de Ailing" width="128" height="128" decoding="async" fetchpriority="high">
-        <h1 id="profile-title" data-profile-name>Ailing</h1>
-        <p class="username" data-profile-user>CÓDIGO AILING</p>
-        <p class="bio" data-profile-bio>Creador de contenido de Rocket League<br>Torneos, privadas, freestyle, retos y más.</p>
-
-        <nav class="social-links" data-social-links aria-label="Redes sociales"></nav>
-      </header>
-
-      <nav class="link-list" data-link-list aria-label="Enlaces principales"></nav>
+<body data-scene="kickoff">
+  <a class="skip-link" href="#canales">Ir a los enlaces</a>
+  <div class="arena-world" aria-hidden="true">
+    <div class="arena-world__scene arena-world__scene--kickoff"></div>
+    <div class="arena-world__scene arena-world__scene--boost"></div>
+    <div class="arena-world__shade"></div>
+    <div class="arena-world__lines"></div>
+  </div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Ailing, volver al inicio">
+      <img src="assets/logo.png" alt="" width="48" height="48" decoding="async">
+      <span><strong>AILING</strong><small>ROCKET LEAGUE</small></span>
+    </a>
+    <div class="site-header__right">
+      <span class="arena-status"><i aria-hidden="true"></i> MODO ARENA</span>
+      <button class="share-button" type="button" aria-label="Compartir Ailing" title="Compartir Ailing"><i class="fa-solid fa-share-nodes" aria-hidden="true"></i></button>
+    </div>
+  </header>
+  <nav class="scene-nav" aria-label="Escenas">
+    <a href="#inicio" data-scene-link="kickoff" aria-label="Ir al inicio"><span>01</span><i></i><strong>KICKOFF</strong></a>
+    <a href="#boost" data-scene-link="boost" aria-label="Ir a la escena de boost"><span>02</span><i></i><strong>BOOST</strong></a>
+  </nav>
+  <main>
+    <section class="chapter kickoff" id="inicio" aria-labelledby="hero-title">
+      <div class="kickoff__layout">
+        <div class="kickoff__story">
+          <p class="eyebrow"><span class="eyebrow__line"></span> ROCKET LEAGUE / CREADOR DE CONTENIDO</p>
+          <h1 id="hero-title">AILING<span class="title-spark" aria-hidden="true"></span></h1>
+          <p class="kickoff__tagline">QUE EMPIECE<br><em>EL PARTIDO.</em></p>
+          <p class="kickoff__intro">Torneos, privadas, freestyle, retos y más. Todo empieza en la arena.</p>
+          <a class="explore-link" href="#boost"><span>SUBE EL NIVEL</span><i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+        </div>
+        <nav class="route-menu" id="canales" aria-label="Enlaces de Ailing">
+          <div class="route-menu__heading"><span>SELECCIONA TU JUGADA</span><small>06 RUTAS / ACCESO DIRECTO</small></div>
+          <a class="route-link" href="https://www.tiktok.com/@ailing_its" target="_blank" rel="noopener noreferrer"><span class="route-link__index">01</span><i class="fa-brands fa-tiktok" aria-hidden="true"></i><span class="route-link__name">TikTok</span><span class="route-link__arrow" aria-hidden="true">↗</span></a>
+          <a class="route-link" href="https://www.youtube.com/@ailing21" target="_blank" rel="noopener noreferrer"><span class="route-link__index">02</span><i class="fa-brands fa-youtube" aria-hidden="true"></i><span class="route-link__name">YouTube</span><span class="route-link__arrow" aria-hidden="true">↗</span></a>
+          <a class="route-link" href="https://kick.com/ailing21" target="_blank" rel="noopener noreferrer"><span class="route-link__index">03</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M1.333 0h8v5.333H12V2.667h2.667V0h8v8H20v2.667h-2.667v2.666H20V16h2.667v8h-8v-2.667H12v-2.666H9.333V24h-8Z"/></svg><span class="route-link__name">Kick</span><span class="route-link__arrow" aria-hidden="true">↗</span></a>
+          <a class="route-link route-link--alternate" href="/ailingbyte"><span class="route-link__index">04</span><i class="fa-solid fa-gamepad" aria-hidden="true"></i><span class="route-link__name">Ailing Byte · juegos variados</span><span class="route-link__arrow" aria-hidden="true">↗</span></a>
+          <a class="route-link" href="https://discord.gg/ezSR5JRKUJ" target="_blank" rel="noopener noreferrer"><span class="route-link__index">05</span><i class="fa-brands fa-discord" aria-hidden="true"></i><span class="route-link__name">Discord</span><span class="route-link__arrow" aria-hidden="true">↗</span></a>
+          <button class="route-link route-link--code" type="button" data-copy-code="AILING" aria-label="Copiar código de creador AILING"><span class="route-link__index">06</span><i class="fa-regular fa-copy" aria-hidden="true"></i><span class="route-link__name">Código de creador: <strong>AILING</strong></span><span class="route-link__arrow" aria-hidden="true">＋</span></button>
+        </nav>
+      </div>
+      <div class="kickoff__bottom"><span>AILING / EL CAMPO ESTÁ ABIERTO</span><span>DESLIZA PARA DESPEGAR <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></span></div>
+    </section>
+    <section class="chapter boost" id="boost" aria-labelledby="boost-title">
+      <div class="boost__layout">
+        <div class="boost__story reveal">
+          <p class="eyebrow"><span class="eyebrow__line"></span> 02 / MÁS ALLÁ DEL CAMPO</p>
+          <h2 id="boost-title">VUELA<br><em>MÁS ALTO.</em></h2>
+          <p>La siguiente jugada siempre empieza contigo. Entra desde tu celular y sigue en la arena.</p>
+          <a class="return-link" href="#canales">VOLVER A LOS CANALES <span aria-hidden="true">↗</span></a>
+        </div>
+        <aside class="qr-access reveal" aria-label="Código QR de Ailing">
+          <div class="qr-access__top"><span>ACCESO A LA ARENA</span><span>AL / 02</span></div>
+          <div class="qr-access__image"><img src="assets/qr-code.png" alt="Código QR para abrir Ailing en celular" width="160" height="160" loading="lazy"></div>
+          <strong>ESCANEA Y ENTRA</strong>
+          <small>ailing.com.mx</small>
+        </aside>
+      </div>
+      <footer class="boost__footer"><span>AILING © 2026</span><span>ROCKET LEAGUE · TORNEOS · FREESTYLE</span></footer>
     </section>
   </main>
-
-  <aside class="qr-panel" aria-label="Mirar en celular">
-    <span>Mirar en celular</span>
-    <div id="qr-code" class="qr-code" aria-hidden="true">
-      <img src="assets/qr-code.png" alt="Código QR para abrir Ailing en celular">
-    </div>
-  </aside>
-
   <div class="toast" role="status" aria-live="polite"></div>
-
-  <script src="script.js"></script>
+  <script src="main.js" defer></script>
 </body>
 </html>

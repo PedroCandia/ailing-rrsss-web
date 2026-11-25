@@ -20,15 +20,15 @@ const profiles = {
       { label: "TikTok", icon: "fa-brands fa-tiktok", url: "https://www.tiktok.com/@ailing_its" },
       { label: "YouTube", icon: "fa-brands fa-youtube", url: "https://www.youtube.com/@ailing21" },
       { label: "Kick", icon: "kick", url: sharedLinks.kick },
-      { label: "Discord", icon: "fa-brands fa-discord", url: sharedLinks.discord },
       { label: "Ailing Byte · juegos variados", icon: "fa-solid fa-gamepad", url: "/ailingbyte", internal: true, featured: true },
+      { label: "Discord", icon: "fa-brands fa-discord", url: sharedLinks.discord },
       { label: `Código de creador: ${sharedLinks.creatorCode}`, icon: "fa-regular fa-copy", copy: sharedLinks.creatorCode }
     ]
   },
   byte: {
     name: "Ailing Byte",
-    username: "JUEGOS VARIADOS",
-    bio: "Canal secundario de juegos variados:<br>GTA, Fortnite y más.",
+    username: "CÓDIGO AILING",
+    bio: "Juegos variados: GTA, Fortnite y más.",
     photo: "../assets/logo.png",
     socials: [
       { name: "TikTok", icon: "fa-brands fa-tiktok", url: "https://www.tiktok.com/@ailing.byte" },
@@ -36,9 +36,10 @@ const profiles = {
       { name: "Discord", icon: "fa-brands fa-discord", url: sharedLinks.discord }
     ],
     buttons: [
-      { label: "TikTok · Ailing Byte", icon: "fa-brands fa-tiktok", url: "https://www.tiktok.com/@ailing.byte" },
-      { label: "YouTube · Ailing Byte", icon: "fa-brands fa-youtube", url: "https://www.youtube.com/@ailingbyte" },
+      { label: "TikTok", icon: "fa-brands fa-tiktok", url: "https://www.tiktok.com/@ailing.byte" },
+      { label: "YouTube", icon: "fa-brands fa-youtube", url: "https://www.youtube.com/@ailingbyte" },
       { label: "Kick", icon: "kick", url: sharedLinks.kick },
+      { label: "Ailing · Rocket League", icon: "fa-solid fa-gamepad", url: "/", internal: true, featured: true },
       { label: "Discord", icon: "fa-brands fa-discord", url: sharedLinks.discord },
       { label: `Código de creador: ${sharedLinks.creatorCode}`, icon: "fa-regular fa-copy", copy: sharedLinks.creatorCode }
     ]
@@ -67,6 +68,7 @@ function renderProfile() {
 }
 
 function renderSocialLinks() {
+  if (!socialLinks) return;
   socialLinks.innerHTML = siteConfig.socials
     .map((social) => `
       <a href="${social.url}" target="_blank" rel="noopener noreferrer" aria-label="${social.name} de ${siteConfig.name}">

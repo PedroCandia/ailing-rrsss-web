@@ -588,6 +588,13 @@ h1::after {
     linear-gradient(115deg, rgba(85, 243, 236, 0.72), rgba(255, 61, 152, 0.78)) border-box;
 }
 
+.byte-page .link-button--featured {
+  background:
+    linear-gradient(110deg, rgba(11, 53, 60, 0.94), rgba(42, 18, 48, 0.96)) padding-box,
+    linear-gradient(115deg, var(--byte-cyan), rgba(255, 255, 255, 0.7), var(--byte-pink)) border-box;
+  box-shadow: inset 0 0 22px rgba(85, 243, 236, 0.12);
+}
+
 .byte-page .link-button::after {
   background: linear-gradient(90deg, transparent, rgba(85, 243, 236, 0.16), transparent);
 }
